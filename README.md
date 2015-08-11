@@ -39,3 +39,11 @@ options.scaleColors = [{from: 5, till: 7, color: '#FC0'}, ... ]
 ```javascript
 options.scaleText = { 2: 'Min', 8: 'Max', ... }
 ```
+
+Methods
+-------
+
+* **render()** - render HTML
+* **empty()** - clear SVG-element from DOM & remove this.svg
+* **setValue(value)** - set array position by value
+getPointOnCircle(), drawIndicator(), drawPartOfCircle(), drawArc(), drawCircle(), drawLine(), drawText()
