@@ -2,6 +2,7 @@ Gauge
 =====
 
 Gauge widget using SVG and JS.
+Demo - https://jsfiddle.net/poltor/7k1a2e96/
 
 ```javascript
 var gauge = new Gauge([options]);
