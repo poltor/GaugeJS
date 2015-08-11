@@ -1,0 +1,57 @@
+body {
+	height: 500px;
+	position: relative;
+}
+
+#container {
+	height: 450px;
+	width: 450px;
+	position: absolute;
+	top: 50%;
+	margin-top: -135px;
+	left: 50%;
+	margin-left: -225px;
+}
+
+.garage .stroke-section {
+	stroke-width: 3px;
+	stroke: #f00;
+	stroke-position: 'inside';
+}
+
+.gauge .spindle {
+	stroke-width: 0;
+	fill: #f00;
+}
+
+.gauge .spindle, .gauge .arrow {
+	stroke-width: 0;
+	fill: #1E98E4;
+}
+
+
+.gauge .text {
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 16px;
+	fill: #666;
+	text-anchor: middle;
+}
+
+.gauge .major-thick {
+	stroke: #666;
+	stroke-width: 2;
+}
+
+.gauge .minor-thick {
+	stroke: #666 !important;
+	stroke-width: 2;
+	opacity: 0.2;
+}
+
+.gauge .indicator-group {
+	-moz-transition: all 2.5s ease-in-out;
+	-o-transition: all 2.5s ease-in-out;
+	-webkit-transition: all 2.5s ease-in-out;
+	transition: all 2.5s ease-in-out;
+}

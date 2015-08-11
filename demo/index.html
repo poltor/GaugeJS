@@ -1,0 +1,30 @@
+<html>
+<head>
+	<link rel="stylesheet" href="./../dist/css/gauge.css" type="text/css" />
+</head>
+<body>
+	<div id="container"></div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="./../dist/js/gauge.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var gauge = new Gauge({
+			width: 450,
+			height: 450,
+			maxRangeAngle: 210,
+			scaleText: {
+				2: 'Min',
+				8: 'Max',
+			},
+			scaleColors: [
+				{from: 5, till: 7, color: '#FC0'},
+				{from: 7, till: 8, color: '#f00'},
+			],
+			indicatorArrowWidth: 195,
+			scaleMinorTickInterval: 0.25,
+			scalePosition: 'outside',
+		}).setValue(4.78);
+	});
+	</script>
+</body>
+</html>
