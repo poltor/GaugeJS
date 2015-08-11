@@ -5,6 +5,7 @@ Gauge widget using SVG and JS.
 
 ```javascript
 var gauge = new Gauge([options]);
+gauge.setValue(5.6);
 ```
 
 Options
