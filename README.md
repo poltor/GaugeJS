@@ -46,4 +46,10 @@ Methods
 * **render()** - render HTML
 * **empty()** - clear SVG-element from DOM & remove this.svg
 * **setValue(value)** - set array position by value
-getPointOnCircle(), drawIndicator(), drawPartOfCircle(), drawArc(), drawCircle(), drawLine(), drawText()
+* **getPointOnCircle(cx, cy, radius, angle)**
+* **drawIndicator(cx, cy, domElement)**
+* **drawPartOfCircle(cx, cy, radius, startAngle, endAngle, color, domElement)**
+* **drawArc(startPointOnCircle, endPointOnCircle, radius, color, domElement)**
+* **drawCircle(cx, cy, r, domElement)**
+* **drawLine(x1, y1, x2, y2, transform, domElement)**
+* **drawText(cx, cy, text, domElement)**
