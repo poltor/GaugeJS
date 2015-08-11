@@ -19,8 +19,8 @@ Options
 | **indicatorSpindleRadius** | Indicator spindle radius (px)         | 10                                           |
 | **indicatorArrowLength**   | indicator Arrow width (px)            | 8                                            |
 | **indicatorArrowWidth**    | Indicator Arrow height (px)           | 200                                          |
-| **scaleMin**               | Minimal visibility value              |                                              |
-| **scaleMax**               | Maximum visibility value              |                                              |
+| **scaleMin**               | Minimal visibility value              | 0                                            |
+| **scaleMax**               | Maximum visibility value              | 10                                           |
 | **scalePosition**          | Scale numbers inside/outside circle   | 'outside'                                    |
 | **scaleMajorTickInterval** | Step of rullers with numbers          | 1                                            |
 | **scaleMinorTickInterval** | Step of rullers without numbers       | 0.1                                          |
