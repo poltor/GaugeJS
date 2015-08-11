@@ -13,7 +13,7 @@
 		scalePosition: 'outside',
 		scaleMajorTickInterval: 1,
 		scaleMajorTickOffset: -10,
-		scaleMajorTickLength: -5,
+		scaleMajorTickLength: -6,
 		scaleMinorTickLength: -2,
 		scaleMinorTickInterval: 0.1,
 		scaleTextTickOffsetTop: -7,
