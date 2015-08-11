@@ -26,3 +26,15 @@ Options
 | **scaleMinorTickInterval** | Step of rullers without numbers     | 0.1                                          |
 | **scaleText**              | Scale text                          | {}                                           |
 | **scaleColors**            | Scale sections                      | []                                           |
+
+### Option **scaleColors**
+
+```javascript
+options.scaleColors = [{from: 5, till: 7, color: '#FC0'}, ... ]
+```
+
+### Option **scaleText**
+
+```javascript
+options.scaleText = { 2: 'Min', 8: 'Max', ... }
+```
