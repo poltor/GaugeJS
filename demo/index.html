@@ -4,27 +4,28 @@
 </head>
 <body>
 	<div id="container"></div>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script type="text/javascript" src="./../dist/js/gauge.js"></script>
+	// <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="./../src/js/gauge.js"></script>
 	<script type="text/javascript">
-	$(document).ready(function(){
-		var gauge = new Gauge({
-			width: 450,
-			height: 450,
-			maxRangeAngle: 210,
+	var gauge = new Gauge({
+			scaleMin: 0,
+			scaleMax: 9,
+			scaleColors: [
+				{from: 6, till: 8, color: '#FC0'},
+				{from: 8, till: 9, color: '#f00'},
+			],
 			scaleText: {
 				2: 'Min',
-				8: 'Max',
+				9: 'Max',
 			},
-			scaleColors: [
-				{from: 5, till: 7, color: '#FC0'},
-				{from: 7, till: 8, color: '#f00'},
-			],
+			width: 450,
+			height: 450,
+			maxRangeAngle: 215,
 			indicatorArrowWidth: 195,
 			scaleMinorTickInterval: 0.25,
 			scalePosition: 'outside',
-		}).setValue(4.78);
-	});
+		});
+		gauge.setValue(6.6);
 	</script>
 </body>
 </html>
