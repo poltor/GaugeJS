@@ -4,8 +4,7 @@
 </head>
 <body>
 	<div id="container"></div>
-	// <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script type="text/javascript" src="./../src/js/gauge.js"></script>
+	<script type="text/javascript" src="./../dist/js/gauge.js"></script>
 	<script type="text/javascript">
 	var gauge = new Gauge({
 			scaleMin: 0,
@@ -15,17 +14,20 @@
 				{from: 8, till: 9, color: '#f00'},
 			],
 			scaleText: {
-				2: 'Min',
-				9: 'Max',
+				0: 'zoro',
+				2: 'two',
+				4: 'four',
+				6: 'six',
+				8: 'eight',
 			},
-			width: 450,
-			height: 450,
+			width: 600,
+			height: 500,
 			maxRangeAngle: 215,
 			indicatorArrowWidth: 195,
-			scaleMinorTickInterval: 0.25,
+			scaleMinorTickInterval: 0.2,
 			scalePosition: 'outside',
 		});
-		gauge.setValue(6.6);
+		gauge.setValue(3.6);
 	</script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 ;(function (window, document) {
 
 	var settings = {
-		width: 620,
+		width: 600,
 		height: 500,
 		maxRangeAngle: 285,
 		rangeRadius: 180,
@@ -16,8 +16,8 @@
 		scaleMajorTickLength: -5,
 		scaleMinorTickLength: -2,
 		scaleMinorTickInterval: 0.1,
-		scaleTextTickOffsetTop: -5,
-		scaleTextTickOffsetLeft: 0,
+		scaleTextTickOffsetTop: -7,
+		scaleTextTickOffsetLeft: -1,
 		scaleDefaultColor: '#666',
 		scaleText: {},
 		scaleColors: [],
@@ -51,46 +51,6 @@
     }
 
 
-    Gauge.prototype.drawScale = function(cx, cy, angle, value, domElement) {
-    	var scaleMajorTickOffset = this.options.scaleMajorTickOffset;
-		var scaleMajorTickLength = this.options.scaleMajorTickLength
-		var offset = 30;
-    	if (this.options.scalePosition != 'outside') {
-    		var scaleMajorTickOffset = -this.options.scaleMajorTickOffset;
-			var scaleMajorTickLength = -this.options.scaleMajorTickLength
-			var offset = -30;
-    	}
-        
-    	if ((value - this.options.scaleMin).toFixed(6) % this.options.scaleMajorTickInterval == 0) {
-			var angleRad = -angle * Math.PI/180
-			this.drawLine(
-				cx, cy - this.options.rangeRadius + scaleMajorTickOffset, 
-				cx, cy - this.options.rangeRadius + scaleMajorTickOffset + scaleMajorTickLength,
-				'rotate(' + (angle - 180) + ',' + cx + ',' + cy + ')',
-				domElement
-			).setAttribute('class', 'major-thick');
-			text = Math.round(value * 100) / 100;
-			if (this.options.scaleText[Math.round(value * 100) / 100]) {
-				text = this.options.scaleText[Math.round(value * 100) / 100];
-			}
-			this.drawText(
-				cx + (this.options.rangeRadius + offset) * Math.sin(angleRad) - this.options.scaleTextTickOffsetLeft,
-				cy + (this.options.rangeRadius + offset) * Math.cos(angleRad) - this.options.scaleTextTickOffsetTop, 
-				text, 
-				domElement
-			).setAttribute('class', 'text');
-		} else {
-			this.drawLine(
-				cx, cy - this.options.rangeRadius + scaleMajorTickOffset, 
-				cx, cy - this.options.rangeRadius + scaleMajorTickOffset + this.options.scaleMinorTickLength,
-				'rotate(' + (angle - 180) + ',' + cx + ',' + cy + ')',
-				domElement
-			).setAttribute('class', 'minor-thick');
-		}
-
-
-    }
-
 
     Gauge.prototype.render = function() {
     	var center = { x: this.options.width.toFixed(6) / 2, y: this.options.height.toFixed(6) / 2 };
@@ -110,11 +70,11 @@
 		
 		var scaleMajorTickOffset = this.options.scaleMajorTickOffset;
 		var scaleMajorTickLength = this.options.scaleMajorTickLength
-		var offset = 30;
+		var offset = 40;
     	if (this.options.scalePosition != 'outside') {
     		var scaleMajorTickOffset = -this.options.scaleMajorTickOffset;
 			var scaleMajorTickLength = -this.options.scaleMajorTickLength
-			var offset = -30;
+			var offset = -40;
     	}
 
     	var counter = 0;
@@ -127,8 +87,9 @@
     		if ((value.toFixed(6) - this.options.scaleMin).toFixed(6) % this.options.scaleMajorTickInterval.toFixed(6) == 0) {
     			var angleRad = -angle * Math.PI / 180;
     			text = Math.round(value * 100) / 100;
-				if (this.options.scaleText[value.toFixed(6)]) {
-					text = this.options.scaleText[value.toFixed(6)];
+    			var key = parseInt(value.toFixed(6));
+				if (this.options.scaleText[key]) {
+					text = this.options.scaleText[key];
 				}
 				this.drawLine(
 					center.x, center.y - this.options.rangeRadius + scaleMajorTickOffset, 
