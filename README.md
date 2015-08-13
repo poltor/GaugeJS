@@ -46,7 +46,7 @@ Methods
 
 * **render()** - render HTML
 * **empty()** - clear SVG-element from DOM & remove this.svg
-* **setValue(value)** - set array position by value
+* **setValue(value)** - set arrow position by value
 * **getPointOnCircle(cx, cy, radius, angle)**
 * **drawIndicator(cx, cy, domElement)**
 * **drawPartOfCircle(cx, cy, radius, startAngle, endAngle, color, domElement)**
